@@ -24,6 +24,14 @@ function hideSidebar() {
 
 
 
+// ---------------  Hide Side-bar when click on menu-item --------------- 
+const sidebarItems = document.querySelectorAll('.side-bar a');
+sidebarItems.forEach(e => {
+    e.addEventListener('click', hideSidebar);
+});
+
+
+
 // ---------------  Scroll Animation ---------------
 const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
@@ -124,3 +132,6 @@ form.addEventListener('submit', (event) => {
         [nameInput, emailInput, messageInput].forEach((input) => (input.style.borderColor = ''));
     }
 });
+
+
+
