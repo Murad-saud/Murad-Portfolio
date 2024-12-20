@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@iconscout/unicons@4.0.8/css/line.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="style.css">
+
+    <title>Portfolio - Murad Saud</title>
+</head>
+
+<body>
+    <!-- NAVBAR -->
+    <nav>
+        <div class="logo">
+            <a href="/">Murad Saud</a>
+        </div>
+
+        <div class="nav-container">
+
+            <ul class="nav-menu">
+                <li class="menu-item">
+                    <a href="#home">Home</a>
+                </li>
+                <li class="menu-item">
+                    <a href="#skills">Skills</a>
+                </li>
+                <li class="menu-item">
+                    <a href="#about">About</a>
+                </li>
+                <li class="menu-item">
+                    <a href="#projects">Projects</a>
+                </li>
+                <li class="menu-item">
+                    <a href="#contact">Contact</a>
+                </li>
+
+            </ul>
+        </div>
+
+        <ul class="side-bar">
+            <i class="fas fa-times" onclick=hideSidebar()></i>
+            <li class="menu-item">
+                <a href="#home">Home</a>
+            </li>
+            <li class="menu-item">
+                <a href="#skills">Skills</a>
+            </li>
+            <li class="menu-item">
+                <a href="#about">About</a>
+            </li>
+            <li class="menu-item">
+                <a href="#projects">Projects</a>
+            </li>
+            <li class="menu-item">
+                <a href="#contact">Contact</a>
+            </li>
+        </ul>
+
+        <div class="mode">
+            <div class="moon-sun" id="toggle-switch">
+                <i class="fa fa-moon" id="moon"></i>
+                <i class="fa fa-sun" id="sun"></i>
+            </div>
+            <div class="nav-menu-btn">
+                <i class="uil uil-bars" onclick=showSidebar()></i>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+
+        <!-- SECTION 1: Main -->
+        <section id="home" class="home-section hidden">
+
+            <div class="text">
+                <h2>Welcome, I'm Murad 👋</h2>
+                <p>Thanks for stopping by! I'm excited to share my work, journey, and passion for creating
+                    impactful solutions. Take a moment to explore my projects, and feel free to reach out if you're
+                    looking for a creative partner or have any ideas to collaborate on. Whether you're here to connect,
+                    learn more about my work, or simply explore, I'm glad to have you. Let's create something
+                    amazing together"</p>
+
+                <p class="quote">"Dream. Learn. Code. Repeat."</p>
+            </div>
+
+            <div class="home-image">
+                <!--  استخدمت صورة عشوائية لان ما حصلتش صورة مناسبة-->
+                <img src="images/pngtree-young-programmer-writing-program-code-png-image_11353939.png"
+                    alt="i have no pictures">
+            </div>
+
+        </section>
+
+
+        <!-- SECTION 2: Skills -->
+        <section id="skills" class="skills-section hidden">
+            <h2>Skills</h2>
+            <div class="text">
+                I have a solid foundation in C# and am progressing in web development, focusing on ASP.NET.
+                While frontend development isn't my passion, I'm learning JavaScript and CSS to meet college
+                requirements. My interests lie in backend development, where I enjoy solving challenges and
+                building reliable systems. I aim to refine my skills in creating robust web applications
+                as I continue learning.
+            </div>
+
+            <div class="cells">
+
+                <div class="cell">
+                    <img src="images/html-logo.webp" alt="html logo">
+                    <span>HTML</span>
+                </div>
+
+                <div class="cell">
+                    <img src="images/css-logo.webp" alt="css logo">
+                    <span>CSS</span>
+                </div>
+
+                <div class="cell">
+                    <img src="images/javascript-logo.webp" alt="javascript logo">
+                    <span>JavaScript</span>
+                </div>
+
+                <div class="cell">
+                    <img src="images/free-csharp-logo-icon-download-in-svg-png-gif-file-formats--programming-langugae-language-pack-logos-icons-1175240.webp"
+                        alt="c# logo">
+                    <span>C#</span>
+                </div>
+
+                <div class="cell">
+                    <img src="images/63064f1fedf422395124660e_e7d03466.png" alt="asp.net">
+                    <span>ASP.NET</span>
+                </div>
+
+            </div>
+
+            <!-- Skill Bars -->
+            <div class="skill hidden">
+
+                <div class="skill-box">
+                    <span class="title">HTML</span>
+                    <div class="skill-bar">
+                        <span class="skill-per html"></span>
+                    </div>
+                    <span class="tooltip">90%</span>
+                </div>
+                <div class="skill-box">
+                    <span class="title">CSS</span>
+                    <div class="skill-bar">
+                        <span class="skill-per css"></span>
+                    </div>
+                    <span class="tooltip">85%</span>
+                </div>
+                <div class="skill-box">
+                    <span class="title">JS</span>
+                    <div class="skill-bar">
+                        <span class="skill-per js"></span>
+                    </div>
+                    <span class="tooltip">40%</span>
+                </div>
+                <div class="skill-box">
+                    <span class="title">C#</span>
+                    <div class="skill-bar">
+                        <span class="skill-per cs"></span>
+                    </div>
+                    <span class="tooltip">90%</span>
+                </div>
+                <div class="skill-box">
+                    <span class="title">ASP.NET</span>
+                    <div class="skill-bar">
+                        <span class="skill-per asp"></span>
+                    </div>
+                    <span class="tooltip">60%</span>
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- SECTION 3: About -->
+        <section id="about" class="about-section hidden">
+            <h2>About</h2>
+
+            <div class="group">
+                <div class="person-details">
+                    <img src="images/pngtree-programmer-it-developer-png-image_10439723.png">
+                    <p>Murad Saud</p>
+                    <p>.NET Web Developer</p>
+                </div>
+
+                <div class="text">
+                    I'm a software engineering student with a strong interest in backend development and learning
+                    web development with ASP.NET. Im passionate about improving my skills, building efficient
+                    systems, and exploring new technologies every step of the way.
+                    This portfolio is a glimpse into my journey as a student and developer—sharing the projects
+                    I've worked on and the knowledge I'm gaining along the way. I'm always excited to connect
+                    with others who share curiosity, creativity, or new opportunities.
+                </div>
+            </div>
+        </section>
+
+
+        <!--    SECTION 4: Projects -->
+        <section id="projects" class="projects-section hidden">
+            <h2>Projects</h2>
+            <div class="project-container">
+
+                <div class="project-box">
+                    <a href="https://murad-saud.github.io/solor-system/" target="_blank">
+                        <i class="uil uil-briefcase-alt"></i>
+                        <h3>Project #1</h3>
+                        <p>Solar System</p>
+                    </a>
+                </div>
+                <div class="project-box">
+                    <a href="https://murad-saud.github.io/Dashboard/" target="_blank">
+                        <i class="uil uil-briefcase-alt"></i>
+                        <h3>Project #2</h3>
+                        <p>Dashboard</p>
+                    </a>
+                </div>
+                <div class="project-box">
+                    <a href="https://murad-saud.github.io/Discover-Design/" target="_blank">
+                        <i class="uil uil-briefcase-alt"></i>
+                        <h3>Project #3</h3>
+                        <p>Discover Design</p>
+                    </a>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- SECTION 5: Contact -->
+        <section id="contact" class="contact-section hidden">
+
+            <h2>Contact</h2>
+
+            <div class="group">
+
+                <div class="text">
+                    Feel free to reach out for any inquiries or collaborations. I am always open to discussing
+                    new projects, creative ideas, or opportunities to contribute to meaningful work. Whether you
+                    have a question, feedback, or simply want to say hello, don't hesitate to drop a message.
+                    Your thoughts are valuable, and I'll make every effort to respond promptly. Let's connect
+                    and build something great together!
+                </div>
+
+
+                <form>
+                    <label for="name">Name</label>
+                    <input type="text" id="name" placeholder="Your Name" required>
+                    <div class="error"></div>
+
+                    <label for="email">Email</label>
+                    <input type="email" id="email" placeholder="Your Email" required>
+                    <div class="error"></div>
+
+                    <label for="message">Message</label>
+                    <textarea id="message" cols="30" rows="10" placeholder="Message" required></textarea>
+                    <div class="error"></div>
+
+                    <button type="submit">Send Message</button>
+                </form>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>

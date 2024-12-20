@@ -1,0 +1,634 @@
+:root {
+  --text-color: #1a1c20;
+  --link-color: #1b77b4;
+  --background-color: #eeeff1;
+  --main-color: #3498DB;
+  --nav-color: #e7e9ec;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  color: var(--text-color);
+  background-color: var(--background-color);
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+body.dark {
+  --background-color: #202425;
+  --text-color: #fff;
+  --nav-color: #1c1d1e;
+}
+
+a {
+  color: var(--link-color);
+  text-decoration: none;
+}
+
+::selection {
+  background-color: var(--main-color);
+  color: #fff;
+}
+
+/* ---------------------------------------------- NAV BAR ---------------------------------------------- */
+nav {
+  display: flex;
+  position: fixed;
+  z-index: 99;
+  top: 0;
+  width: 100%;
+  max-width: inherit;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--nav-color);
+  padding: 0 50px;
+  height: 60px;
+  box-shadow: 0px 0px 8px 2px rgba(0, 0, 0, 0.3);
+}
+
+
+nav .logo a {
+  color: var(--text-color);
+  font-size: 22px;
+  font-weight: 600;
+}
+
+nav .nav-menu {
+  display: flex;
+  position: absolute;
+  column-gap: 50px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.menu-item {
+  list-style: none;
+}
+
+.nav-menu a {
+  color: var(--text-color);
+  font-size: 15px;
+  font-weight: 550;
+}
+
+.nav-menu a:hover {
+  color: var(--main-color);
+  transition: 0.175s ease-in;
+}
+
+
+/* >>>>>>>>>>>>>>>>>>>> Mode <<<<<<<<<<<<<<<<<<<< */
+.mode {
+  display: flex;
+  align-items: center;
+}
+
+.moon-sun {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  width: 40px;
+  border-radius: 30px;
+  cursor: pointer;
+  background-color: var(--mode-color);
+}
+
+.moon-sun #sun,
+.moon-sun #moon {
+  position: absolute;
+  transition: 0.15s ease-in;
+}
+
+
+#sun {
+  opacity: 0;
+}
+
+body.dark #sun {
+  opacity: 1;
+}
+
+body.dark #moon {
+  opacity: 0;
+}
+
+.moon-sun:hover,
+.nav-menu-btn:hover {
+  color: var(--main-color);
+}
+
+.nav-menu-btn {
+  display: none;
+  cursor: pointer;
+  transition: 0.2s ease-in;
+}
+
+/* >>>>>>>>>>>>>>>>>>>> Side Bar <<<<<<<<<<<<<<<<<<<< */
+.side-bar {
+  position: fixed;
+  display: none;
+  flex-direction: column;
+  gap: 50px;
+  padding: 25px;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: 250px;
+  z-index: 999;
+  background-color: rgba(0, 0, 0, 0.1);
+  box-shadow: -10px 0 10px rgba(0, 0, 0, 0.2);
+  align-items: flex-start;
+  justify-content: flex-start;
+
+  backdrop-filter: blur(29px);
+}
+
+.side-bar li {
+  padding: 10px;
+  width: 100%;
+  height: 15px;
+  transition: 0.2s;
+}
+
+.side-bar a {
+  color: var(--text-color);
+}
+
+.side-bar li:hover {
+  margin: 0px 0px 5px 10px;
+  color: var(--main-color);
+}
+
+.side-bar>i {
+  font-size: 25px;
+  cursor: pointer;
+}
+
+
+
+/* ---------------------------------------------- Home ---------------------------------------------- */
+.home-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 50px;
+  margin: 50px 0;
+  margin-bottom: 50px;
+  gap: 40px;
+}
+
+.home-section .text {
+  flex: 5;
+  /* flex: <flex-grow> <flex-shrink> <flex-basis>; */
+  /* flex: 5 1 0%; */
+}
+
+.home-section .text h2 {
+  font-size: 45px;
+}
+
+.quote {
+  margin-top: 20px;
+  font-size: 20px;
+  font-style: italic;
+  color: var(--main-color);
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+  margin-left: 15px;
+}
+
+.home-section .home-image {
+  flex: 2;
+  display: flex;
+  justify-content: right;
+}
+
+.home-section .home-image img {
+  width: 350px;
+  border-radius: 50%;
+}
+
+
+
+/* ---------------------------------------------- Skills ---------------------------------------------- */
+.skills-section {
+  padding: 0 50px;
+  margin-bottom: 100px;
+}
+
+.skills-section h2 {
+  text-align: center;
+  font-size: 35px;
+  margin-bottom: 35px;
+}
+
+.skills-section .text {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.skills-section .cells {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.skills-section .cells .cell {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  width: 200px;
+  padding: 10px 20px;
+  margin: 10px;
+  border: 1.5px solid #d3d3d3;
+  border-radius: 5px;
+}
+
+.skills-section .cells .cell img {
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
+  border-radius: 2px;
+}
+
+.skills-section .cells .cell span {
+  font-size: 18px;
+}
+
+
+/* >>>>>>>>>>>>>>>>>>>> Skill Bar <<<<<<<<<<<<<<<<<<<< */
+.skill {
+  margin-top: 30px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.skill-box {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 15px;
+  gap: 25px;
+}
+
+.skill-bar {
+  background-color: rgba(0, 0, 0, 0.2);
+  width: 50%;
+  height: 8px;
+}
+
+.skill-per {
+  display: block;
+  background-color: var(--main-color);
+  width: 100%;
+  height: 100%;
+  z-index: 4;
+}
+
+.skill-box .title,
+.tooltip {
+  display: block;
+  font-size: 14px;
+  font-weight: 600;
+  width: 50px;
+}
+
+.skill-per.html {
+  width: 90%;
+}
+
+.skill-per.css {
+  width: 85%;
+}
+
+.skill-per.js {
+  width: 40%;
+}
+
+.skill-per.cs {
+  width: 90%;
+}
+
+.skill-per.asp {
+  width: 60%;
+}
+
+
+/* ---------------------------------------------- About ---------------------------------------------- */
+.about-section {
+  padding: 0 50px;
+  margin-bottom: 100px;
+}
+
+.about-section h2 {
+  font-size: 35px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.about-section .group {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
+
+.about-section .group .person-details {
+  text-align: center;
+  flex: 2;
+}
+
+.about-section .group .person-details img {
+  width: 200px;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+.about-section .group .person-details p {
+  font-weight: 600;
+}
+
+.about-section .group .person-details p:last-child {
+  font-weight: normal;
+}
+
+.about-section .group .text {
+  flex: 8;
+}
+
+
+
+/* ---------------------------------------------- Projects ---------------------------------------------- */
+.projects-section {
+  padding: 0 50px;
+  margin-bottom: 100px;
+}
+
+.projects-section h2 {
+  font-size: 35px;
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+.project-container {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 20px;
+}
+
+.project-box {
+  position: relative;
+  width: 25%;
+  height: 200px;
+  overflow: hidden;
+  border: 1px solid var(--main-color);
+  box-shadow: 1px 8px 10px 2px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  transition: 0.3s;
+}
+
+.project-box a {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: var(--text-color);
+  transition: 0.3s;
+}
+
+.project-box::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 100%;
+  z-index: -1;
+  background-color: var(--main-color);
+  transition: 0.4s;
+}
+
+.project-box:hover.project-box::after {
+  top: 0;
+}
+
+.project-box:hover a {
+  color: var(--nav-color)
+}
+
+
+.project-box i {
+  font-size: 40px;
+}
+
+.project-box h3 {
+  font-size: 18px;
+}
+
+.project-box i {
+  font-size: 40px;
+}
+
+
+
+/* ---------------------------------------------- Contact ---------------------------------------------- */
+.contact-section {
+  padding: 0 50px;
+  margin-bottom: 100px;
+}
+
+.contact-section h2 {
+  font-size: 35px;
+}
+
+.contact-section .group {
+  display: flex;
+  gap: 50px;
+}
+
+.contact-section .group .text {
+  flex: 3;
+  margin-top: 20px;
+}
+
+.contact-section .group form {
+  flex: 3;
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-section .group form input,
+.contact-section .group form textarea {
+  font-family: 'Poppins', sans-serif;
+  border: 2px solid var(--main-color);
+  background-color: transparent;
+  padding: 10px;
+  margin-bottom: 15px;
+  outline: none;
+  resize: none;
+  color: var(--text-color);
+}
+
+.contact-section .group form button {
+  font-size: 16px;
+  font-family: 'Poppins', sans-serif;
+  color: #fff;
+  background-color: var(--main-color);
+  border: none;
+  height: 50px;
+  cursor: pointer;
+  transition: .1s;
+}
+
+.contact-section .group form button:hover {
+  filter: brightness(.9);
+}
+
+.error {
+  color: red;
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+
+/* ---------------------------------------------- Scroll classes ---------------------------------------------- */
+.hidden {
+  opacity: 0;
+  filter: blur(5px);
+  transition: all 1.2s ease;
+  transform: translateY(-25%);
+}
+
+.show {
+  opacity: 1;
+  filter: blur(0px);
+  transform: translate(0);
+}
+
+
+/* ---------------------------------------------- Media ---------------------------------------------- */
+@media (max-width: 950px) {
+
+  /* SECTION 1: Main */
+  .nav-container {
+    display: none
+  }
+
+  .home-section {
+    margin-top: 65px;
+  }
+
+  .home-section .text h2 {
+    font-size: 35px;
+  }
+
+  .nav-menu-btn {
+    display: block;
+    margin-left: 15px;
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 740px) {
+
+  /* SECTION 1: Main */
+  .home-section {
+    flex-direction: column-reverse;
+  }
+
+  .home-section .home-image img {
+    width: 300px;
+  }
+
+  /* SECTION 3: About */
+  .about-section {
+    text-align: center;
+  }
+
+  .about-section .group {
+    flex-direction: column;
+  }
+
+  /* SECTION 4: Projects */
+  .project-container {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .project-box {
+    width: 60%;
+  }
+
+  /* SECTION 5: Contact */
+  .contact-section .group {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 600px) {
+
+  /* NAVBAR */
+  nav {
+    padding: 0 20px;
+  }
+
+  nav .right a {
+    font-size: 22px;
+  }
+
+  nav .right a:last-child {
+    color: var(--text-color);
+    background-color: transparent;
+    padding: 0;
+  }
+
+  nav .right a span {
+    display: none;
+  }
+
+  /* SECTION 1: Main */
+  .home-section {
+    padding: 0 20px;
+  }
+
+  .home-section .text h2 {
+    font-size: 30px;
+  }
+
+  /* SECTION 2: Skills */
+  .skills-section {
+    padding: 0 20px;
+  }
+
+  .skills-section .cells .cell span {
+    font-size: 16px;
+  }
+
+  /* SECTION 3: About */
+  .about-section {
+    padding: 0 20px;
+  }
+
+  /* SECTION 5: Contact */
+  .contact-section {
+    padding: 0 20px;
+  }
+}
